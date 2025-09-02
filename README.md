@@ -9,8 +9,10 @@ This projects scripts are heavily forked from monifactory's
 
 
 This add-on will feature a changement in the recipes of most items making them more difficult to achive.(reffering to ae2 automation)
+
 Currently, fusion crafting have been replaced with assembly line recipes.
 If there is a way to add custom fusion crafting with kubejs I will work on it the fastest I can.
+
 I plan on making it an official optional compat when the project will be entirely finished.
 
 
