@@ -34,5 +34,3 @@ Tiny roadmap :
 [Draconicevolution](https://github.com/Draconic-Inc/Draconic-Evolution) mod by [brandon3055](https://github.com/brandon3055)
 
 [Monifactory](https://github.com/ThePansmith/Monifactory) modpack by [Pansmith](https://github.com/ThePansmith)
-
-Don't bother telling me about the original recipes still being disponible I'm gonna work on it :(
