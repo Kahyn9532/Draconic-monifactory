@@ -1,4 +1,10 @@
+if (Platform.isLoaded("draconicevolution")) {
+    console.log("Ayo sum guy said something is gonna explode... loading compat scripts");    
+
 ServerEvents.recipes(event => {
+
+    event.remove([{ mod: "draconicevolution"}, { type: "minecraft:crafting"}, {}])
+    event.remove({ type: "draconicevolution:fusion_crafting"})
 
     event.replaceInput(
         { input: "draconicevolution:draconium_ingot" },
@@ -24,10 +30,6 @@ ServerEvents.recipes(event => {
         "gtceu:awakened_draconium_dust"
     )
 
-    event.remove({ id: "draconicevolution:draconium_core"})
-    event.remove({ id: "draconicevolution:wyvern_energy_core"})
-
-    event.remove({ id: "draconicevolution:basic_crafting_injector"})
     event.shaped(Item.of("draconicevolution:basic_crafting_injector"), [
         "DPD",
         "RYR",
@@ -84,7 +86,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.assembler("assmbler_awk_draconium")
         .inputFluids("gtceu:draconium 1296")
         .itemInputs("10x draconicevolution:draconium_core", "1x draconicevolution:dragon_heart")
-        .itemOutputs("gtceu:awakened_draconium_block")
+        .itemOutputs("4x gtceu:awakened_draconium_block")
         .duration(1500)
         .EUt(GTValues.VA[GTValues.IV])
     
@@ -174,7 +176,7 @@ ServerEvents.recipes(event => {
         .duration(3000)
         .EUt(GTValues.VA[GTValues.IV])
     })
-
+}
     
     
     
