@@ -3,7 +3,7 @@ if (Platform.isLoaded("draconicevolution")) {
 
 ServerEvents.recipes(event => {
 
-    event.remove([{ mod: "draconicevolution"}, { type: "minecraft:crafting"}, {}])
+    event.remove([{ mod: "draconicevolution"}, { type: "minecraft:crafting"}])
     event.remove({ type: "draconicevolution:fusion_crafting"})
 
     event.replaceInput(
@@ -175,6 +175,13 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:awakened_draconium 288")
         .duration(3000)
         .EUt(GTValues.VA[GTValues.IV])
+    
+    event.recipes.gtceu.packer("pack_drac_dust")
+        .itemOutputs("4x gtceu:small_draconium_dust")
+        .itemInputs("draconicevolution:draconium_dust")
+        .duration(10)
+        .EUt(GTValues.VA[GTValues.LV])
+        .circuit(4)
     })
 }
     
