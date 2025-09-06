@@ -309,6 +309,10 @@ global.itemNukeList = [
     "draconicevolution:awakened_draconium_block",
     "draconicevolution:awakened_draconium_dust",
 
+    //Solar flux reborn de compat
+    "solarflux:sp_de.wyvern",
+    "solarflux:sp_de.draconic",
+    "solarflux:sp_de.chaotic"
 ];
 
 // Create Compat
