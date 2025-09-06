@@ -3,9 +3,6 @@ if (Platform.isLoaded("draconicevolution")) {
 
 ServerEvents.recipes(event => {
 
-    event.remove([{ mod: "draconicevolution"}, { type: "minecraft:crafting"}])
-    event.remove({ type: "draconicevolution:fusion_crafting"})
-
     event.replaceInput(
         { input: "draconicevolution:draconium_ingot" },
         "draconicevolution:draconium_ingot",
@@ -39,7 +36,10 @@ ServerEvents.recipes(event => {
         P: "#gtceu:circuits/ev",
         R: "draconicevolution:draconium_core",
         U: "gtceu:clean_machine_casing"
-    })
+    }).id("draconicevolution:machines/basic_crafting_injecta")
+    event.remove({id: "draconicevolution:machines/basic_crafting_injector"})
+
+
 
     event.recipes.gtceu.assembly_line("fusion_awakened_core")
         .itemOutputs("draconicevolution:awakened_core")
@@ -110,14 +110,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("draconicevolution:wyvern_energy_core")
         .duration(750)
         .EUt(GTValues.VA[GTValues.EV])
-    
-    event.recipes.gtceu.assembler("asmbl_injct_wyv")
-        .itemOutputs("draconicevolution:wyvern_crafting_injector")
-        .itemInputs("4x gtceu:diamatine_empowered_block", "2x draconicevolution:draconium_core", "1x draconicevolution:wyvern_core", "1x gtceu:draconium_block", "draconicevolution:basic_crafting_injector")
-        .inputFluids("gtceu:draconium 1296")
-        .duration(3000)
-        .EUt(GTValues.VA[GTValues.EV])
-    
+
     event.recipes.gtceu.assembly_line("asmbln_injct_awk")
         .itemOutputs("draconicevolution:awakened_crafting_injector")
         .itemInputs("2x draconicevolution:wyvern_core", "gtceu:awakened_draconium_block", "4x gtceu:diamatine_empowered_block", "draconicevolution:wyvern_crafting_injector")
@@ -126,6 +119,48 @@ ServerEvents.recipes(event => {
         .duration(3000)
         .EUt(GTValues.VA[GTValues.IV])
     
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "gtceu:awakened_crafting_injector"
+            },
+            "catalyst": {
+                "item": "draconicevolution:wyvern_crafting_injector"
+            },
+            "total_energy": 256000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "draconicevolution:wyvern_core"
+                },
+                {
+                    "item": "draconicevolution:wyvern_core"
+                },
+                {
+                    "item": "gtceu:awakened_draconium_block"
+                },
+                {
+                    "item": "draconicevolution:wyvern_core"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:machines/awakened_crafting_injecta")
+    event.remove({ id: "draconicevolution:machines/awakened_crafting_injector"})
+
     event.recipes.gtceu.compressor("cmpr_chaos_shard1")
         .itemInputs("9x draconicevolution:large_chaos_frag")
         .itemOutputs("draconicevolution:chaos_shard")
@@ -182,7 +217,302 @@ ServerEvents.recipes(event => {
         .duration(10)
         .EUt(GTValues.VA[GTValues.LV])
         .circuit(4)
-    })
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_pickaxe"
+            },
+            "catalyst": {
+                "item": "gtceu:steel_pickaxe"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_pick")
+    event.remove({ id: "draconicevolution:tools/wyvern_pickaxe"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_sword"
+            },
+            "catalyst": {
+                "item": "gtceu:steel_sword"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_swod")
+    event.remove({ id: "draconicevolution:tools/wyvern_sword"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_axe"
+            },
+            "catalyst": {
+                "item": "gtceu:steel_axe"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_awe")
+    event.remove({ id: "draconicevolution:tools/wyvern_axe"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_shovel"
+            },
+            "catalyst": {
+                "item": "gtceu:steel_shovel"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_shoval")
+    event.remove({ id: "draconicevolution:tools/wyvern_shovel"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_hoe"
+            },
+            "catalyst": {
+                "item": "gtceu:steel_hoe"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_ho")// yuh uh ho
+    event.remove({ id: "draconicevolution:tools/wyvern_hoe"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_chestpiece"
+            },
+            "catalyst": {
+                "item": "minecraft:diamond_chestplate"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_chess")
+    event.remove({ id: "draconicevolution:tools/wyvern_chestpiece"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_bow"
+            },
+            "catalyst": {
+                "item": "redstone_arsenal:flux_bow"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:draconium_bucket"
+                },
+                {
+                    "item": "gtceu:draconium_rod"
+                },
+                {
+                    "item": "draconicevolution:wyvern_energy_core"
+                },
+                {
+                    "item": "draconicevolution:basic_relay_crystal"
+                },
+                {
+                    "tag": "gtceu:circuits/hv"
+                },
+                {
+                    "item": "draconicevolution:draconium_ingot"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:tools/wyvern_bow")
+    event.remove({ id: "draconicevolution:tools/wyvern_rainbow"})
+
+    event.custom(
+        {
+            "type": "draconicevolution:fusion_crafting",
+            "result": {
+                "item": "draconicevolution:wyvern_crafting_injector"
+            },
+            "catalyst": {
+                "item": "draconicevolution:basic_crafting_injector"
+            },
+            "total_energy": 8000000,
+            "tier": "WYVERN",
+            "ingredients": [
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "gtceu:diamatine_empowered_block"
+                },
+                {
+                    "item": "draconicevolution:draconium_core"
+                },
+                {
+                    "item": "draconicevolution:draconium_core"
+                },
+                {
+                    "item": "draconicevolution:draconium_block"
+                },
+                {
+                    "item": "draconicevolution:wyvern_core"
+                }
+
+            ]
+        }
+    ).id("draconicevolution:machines/wyvern_crafting_injecta")
+    event.remove({ id: "draconicevolution:machines/wyvern_crafting_injector"})
+})
+
 }
     
     
