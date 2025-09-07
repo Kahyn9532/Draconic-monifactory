@@ -12,7 +12,7 @@ The idea is just to download the js files, and add them to their respective dire
 This projects scripts are heavily forked from monifactory's
 
 
-This add-on will feature a changement in the recipes of most items making them more difficult to achieve.
+These scripts will feature a changement in the recipes of most draconic evolution items making them more difficult to achieve.(and more greggy ;) )
 
 I plan on making it an official optional compat when the project will be entirely finished.
 
