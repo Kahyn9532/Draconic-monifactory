@@ -300,20 +300,23 @@ global.itemNukeList = [
     "nuclearcraft:wasteland_earth",
     "nuclearcraft:feral_ghoul_spawn_egg",
 
-    //Draconic Evolution
-    "draconicevolution:draconium_ingot",
-    "draconicevolution:draconium_nugget",
-    "draconicevolution:draconium_block",
-    "draconicevolution:awakened_draconium_ingot",
-    "draconicevolution:awakened_draconium_nugget",
-    "draconicevolution:awakened_draconium_block",
-    "draconicevolution:awakened_draconium_dust",
-
-    //Solar flux reborn de compat
-    "solarflux:sp_de.wyvern",
-    "solarflux:sp_de.draconic",
-    "solarflux:sp_de.chaotic"
 ];
+
+if (Platform.isLoaded("draconicevolution")) {
+    global.itemNukeList.push(
+        "draconicevolution:draconium_ingot",
+        "draconicevolution:draconium_nugget",
+        "draconicevolution:draconium_block",
+        "draconicevolution:awakened_draconium_block",
+        "draconicevolution:awakened_draconium_dust",
+        "draconicevolution:generator",
+
+        //Solar flux reborn de compat
+        "solarflux:sp_de.wyvern",
+        "solarflux:sp_de.draconic",
+        "solarflux:sp_de.chaotic"
+    );
+}
 
 // Create Compat
 // Removes machines related to processing
