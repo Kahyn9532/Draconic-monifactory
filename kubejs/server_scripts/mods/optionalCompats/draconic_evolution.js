@@ -247,7 +247,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "draconicevolution:components/wyvern_energy_core"})
     event.recipes.gtceu.assembler("assembler_wyv_nrj_cor")
         .inputFluids("gtceu:draconium 576")
-        .itemInputs("4x draconicevolution:draconium_core", "1x gtceu:diamatine_empowered_block", "#gtceu:batteries/luv")
+        .itemInputs("4x draconicevolution:draconium_core", "1x gtceu:diamatine_empowered_block", "#gtceu:batteries/ev")
         .itemOutputs("draconicevolution:wyvern_energy_core")
         .duration(750)
         .EUt(GTValues.VA[GTValues.EV])
@@ -412,16 +412,17 @@ ServerEvents.recipes(event => {
     event.remove({ id: "draconicevolution:components/draconic_energy_core"})
     event.recipes.gtceu.assembler("asmb_awk_nrj_core")
         .itemOutputs("draconicevolution:draconic_energy_core")
-        .itemInputs("4x gtceu:double_awakened_draconium_plate", "4x draconicevolution:wyvern_energy_core", "draconicevolution:wyvern_core")
+        .itemInputs("4x gtceu:double_awakened_draconium_plate", "4x draconicevolution:wyvern_energy_core", "draconicevolution:wyvern_core", "#gtceu:batteries/zpm")
         .inputFluids("gtceu:awakened_draconium 288")
         .duration(3000)
         .EUt(GTValues.VA[GTValues.IV])
 
     event.remove({ id: "draconicevolution:components/chaotic_energy_core"})
-    event.recipes.gtceu.assembler("asmb_chaotic_nrj_core")
+    event.recipes.gtceu.assembly_line("asmb_chaotic_nrj_core")
         .itemOutputs("draconicevolution:chaotic_energy_core")
         .itemInputs("4x draconicevolution:draconic_energy_core", "4x draconicevolution:awakened_core", "#gtceu:batteries/zpm", "4x draconicevolution:medium_chaos_frag")
         .inputFluids("gtceu:unstable_draconium 1296")
+        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack("draconicevolution:draconic_energy_core").EUt(480).duration(1200))
         .duration(3000)
         .EUt(GTValues.VA[GTValues.ZPM])
     
@@ -1197,14 +1198,15 @@ ServerEvents.recipes(event => {
     event.remove({id: "draconicevolution:machines/reactor_prt_stab_frame"})
 
     event.shaped(Item.of("draconicevolution:reactor_prt_rotor_full"), [
-        " RT",
+        "NRT",
         "YOO",
-        " RT"
+        "NRT"
     ], {
         R: "draconicevolution:reactor_prt_in_rotor",
         T: "draconicevolution:reactor_prt_out_rotor",
         O: "gtceu:double_draconium_plate",
-        Y: "draconicevolution:awakened_core"
+        Y: "draconicevolution:awakened_core",
+        N: "gtceu:zpm_electric_motor"
     }).id("draconicevolution:machines/reactor_prt_stabber_fully")
     event.remove({id: "draconicevolution:machines/reactor_prt_rotor_full"})
 
@@ -1341,6 +1343,18 @@ ServerEvents.recipes(event => {
         M: "gtceu:hv_machine_hull"
     }).id("draconicevolution:machines/fluid_gateway")
     event.remove({id:"draconicevolution:fluid_gate"})
+
+    event.remove({id: "draconicevolution:tools/crystal_binder"})
+    event.shaped(Item.of("draconicevolution:crystal_binder"), [
+        " DR",
+        " LD",
+        "N  "
+    ],{
+        D: "gtceu:draconium_ingot",
+        L: "gtceu:electrum_flux_rod",
+        R: "gtceu:flawless_diamond_gem",
+        N: "draconicevolution:draconium_core"
+    })
 
     event.remove({id:"draconicevolution:machines/grinder"})
     event.recipes.gtceu.assembler("assmb_grndr")
@@ -1848,7 +1862,6 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.LV])
 
 })
-
 }
     
     
