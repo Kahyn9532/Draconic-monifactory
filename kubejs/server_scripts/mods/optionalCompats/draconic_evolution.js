@@ -695,7 +695,7 @@ ServerEvents.recipes(event => {
                 "item": "draconicevolution:basic_crafting_injector"
             },
             "total_energy": 256000,
-            "tier": "WYVERN",
+            "tier": "DRACONIUM",
             "ingredients": [
                 {
                     "item": "gtceu:diamatine_empowered_block"
@@ -1865,4 +1865,5 @@ ServerEvents.recipes(event => {
 }
     
     
+
     
