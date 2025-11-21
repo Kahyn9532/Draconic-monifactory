@@ -1,5 +1,5 @@
 if (Platform.isLoaded("draconicevolution")) {
-    console.log("Ayo sum guy said something is gonna explode... loading compat scripts");    
+    console.log("Sum guy said something is gonna explode... loading compat scripts");    
 
 ServerEvents.recipes(event => {
 
@@ -87,6 +87,106 @@ ServerEvents.recipes(event => {
     }).id("draconicevolution:tools/loactor")
     event.remove({id: "draconicevolution:tools/dislocator"})
 
+    event.shaped(Item.of("draconicevolution:item_draconium_energy"), [
+        "ZZZ",
+        "UVU",
+        "ZZZ"
+    ], {
+        Z: "gtceu:restonia_empowered_gem",
+        U: "gtceu:steel_plate",
+        V: "draconicevolution:module_core"
+    }).id("draconicevolution:modules/basic_energy_module")
+    event.remove({id: "draconicevolution:modules/item_draconium_energy"})
+
+    event.shaped(Item.of("draconicevolution:item_draconium_jump"), [
+        "SBG",
+        "EME",
+        "GBS"
+    ], {
+        S: "gtceu:iron_plate",
+        B:  {"type": "forge:nbt","count": 1,"item": "minecraft:potion","nbt": "{Potion:\"minecraft:leaping\"}"},
+        E: "gtceu:energetic_alloy_dust",
+        M: "draconicevolution:module_core",
+        G: "gtceu:gold_plate"
+    }).id("draconicevolution:modules/basic_jump_module")
+    event.remove({id: "draconicevolution:modules/item_draconium_jump"})
+
+    event.shaped(Item.of("draconicevolution:item_draconium_damage"), [
+        "SBG",
+        "EME",
+        "GBS"
+    ], {
+        S: "gtceu:iron_plate",
+        B: {"type": "forge:nbt","count": 1,"item": "minecraft:potion","nbt": "{Potion:\"minecraft:strength\"}"},
+        E: "gtceu:energetic_alloy_dust",
+        M: "draconicevolution:module_core",
+        G: "gtceu:gold_plate"
+    }).id("draconicevolution:modules/basic_damage_module")
+    event.remove({id: "draconicevolution:modules/item_draconium_damage"})
+
+    event.shaped(Item.of("draconicevolution:item_wyvern_shield_control"), [
+        "DHD",
+        "WMW",
+        "DPD"
+    ], {
+        D: "gtceu:end_steel_ingot",
+        H: "draconicevolution:dragon_heart",
+        W: "draconicevolution:wyvern_core",
+        M: "draconicevolution:module_core",
+        P: "draconicevolution:particle_generator"
+    }).id("draconicevolution:modules/wyvern_shield_control")
+    event.remove({id: "draconicevolution:modules/item_wyvern_shield_control"})
+
+    event.shaped(Item.of("draconicevolution:item_wyvern_shield_capacity"), [
+        "DHD",
+        "WMW",
+        "DHD"
+    ], {
+        D: "gtceu:double_draconium_plate",
+        H: "minecraft:netherite_scrap",
+        W: "gtceu:energetic_alloy_dust",
+        M: "draconicevolution:module_core"
+    }).id("draconicevolution:modules/wyvern_shield_capacity")
+    event.remove({id: "draconicevolution:modules/item_wyvern_shield_capacity"})
+
+    event.shaped(Item.of("draconicevolution:item_chaotic_shield_control"), [
+        "DHD",
+        "WMW",
+        "DHD"
+    ], {
+        D: "gtceu:gravi_star",
+        H: "kubejs:inert_nether_compound_ingot",
+        W: "draconicevolution:chaotic_core",
+        M: "draconicevolution:item_draconic_shield_control"
+    }).id("draconicevolution:modules/chaotic_shield_control")
+    event.remove({id: "draconicevolution:modules/item_chaotic_shield_control"})
+
+    event.shaped(Item.of("draconicevolution:item_draconic_flight"), [
+        "DHD",
+        "WMW",
+        "DPD"
+    ], {
+        D: "gtceu:awakened_draconium_ingot",
+        H: {"type": "forge:nbt","count": 1,"item": "minecraft:potion","nbt": "{Potion:\"minecraft:slow_falling\"}"},
+        W: "draconicevolution:wyvern_core",
+        M: "draconicevolution:item_wyvern_flight",
+        P: "better_angel_ring:angel_ring"
+    }).id("draconicevolution:modules/draconic_flight")
+    event.remove({id: "draconicevolution:modules/item_draconic_flight"})
+
+    event.shaped(Item.of("draconicevolution:item_chaotic_energy_link"), [
+        "DHD",
+        "WMW",
+        "DPD"
+    ], {
+        D: "kubejs:inert_nether_compound_ingot",
+        H: "kubejs:bathyal_energy_core",
+        W: "draconicevolution:draconic_wireless_crystal",
+        M: "draconicevolution:item_draconic_energy_link",
+        P: "draconicevolution:chaotic_core"
+    }).id("draconicevolution:modules/chaotic_energy_link")
+    event.remove({id: "draconicevolution:modules/item_chaotic_energy_link"})
+
     event.shaped(Item.of("draconicevolution:crafting_core"), [
         "UVU",
         "VPV",
@@ -158,7 +258,6 @@ ServerEvents.recipes(event => {
     }).id("draconicevolution:tools/better_magneton")
     event.remove({id: "draconicevolution:tools/advanced_magnet"})
 
-
     event.remove({ id: "draconicevolution:components/awakened_core"})
     event.recipes.gtceu.assembly_line("fusion_awakened_core")
         .itemOutputs("draconicevolution:awakened_core")
@@ -185,7 +284,7 @@ ServerEvents.recipes(event => {
         .duration(3500)
         .EUt(GTValues.VA[GTValues.UV])
     
-//GDHSGFHSGFGHSFGSHFGSHFGSFGJ(i'm gonna go crazy :)
+// CFBHGVESPMHKLZ?DSM§FZHDXKZERJUCVBJQCSJKAKDAZHD(i'm gon go crazy)
     event.remove({ id: "draconicevolution:machines/draconic_relay_crystal"})
     event.recipes.gtceu.assembly_line("fusion_betta_relay_crystal")
         .itemOutputs("draconicevolution:draconic_relay_crystal")
@@ -317,7 +416,11 @@ ServerEvents.recipes(event => {
         .itemOutputs("draconicevolution:chaotic_core")
         .itemInputs("2x draconicevolution:awakened_core", "5x gtceu:awakened_draconium_block", "1x gtceu:diamatine_empowered_block", "6x kubejs:ender_star", "5x draconicevolution:large_chaos_frag")
         .inputFluids("gtceu:unstable_draconium 5184")
-        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack("draconicevolution:awakened_core").EUt(480).duration(1200))
+        .stationResearch(b => b
+            .researchStack("draconicevolution:awakened_core")
+            .CWUt(128, 512000)
+            .EUt(GTValues.VA[GTValues.UV])
+        )
         .duration(3000)
         .EUt(GTValues.VA[GTValues.UV])
 
@@ -410,10 +513,11 @@ ServerEvents.recipes(event => {
     event.remove({ id: "draconicevolution:machines/chaotic_crafting_injector"})
 
     event.remove({ id: "draconicevolution:components/draconic_energy_core"})
-    event.recipes.gtceu.assembler("asmb_awk_nrj_core")
+    event.recipes.gtceu.assembly_line("asmb_awk_nrj_core")
         .itemOutputs("draconicevolution:draconic_energy_core")
         .itemInputs("4x gtceu:double_awakened_draconium_plate", "4x draconicevolution:wyvern_energy_core", "draconicevolution:wyvern_core", "#gtceu:batteries/zpm")
         .inputFluids("gtceu:awakened_draconium 288")
+        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack("draconicevolution:wyvern_energy_core").EUt(480).duration(1200))
         .duration(3000)
         .EUt(GTValues.VA[GTValues.IV])
 
@@ -422,16 +526,20 @@ ServerEvents.recipes(event => {
         .itemOutputs("draconicevolution:chaotic_energy_core")
         .itemInputs("4x draconicevolution:draconic_energy_core", "4x draconicevolution:awakened_core", "#gtceu:batteries/zpm", "4x draconicevolution:medium_chaos_frag")
         .inputFluids("gtceu:unstable_draconium 1296")
-        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack("draconicevolution:draconic_energy_core").EUt(480).duration(1200))
+        .stationResearch(b => b
+            .researchStack("draconicevolution:draconic_energy_core")
+            .CWUt(128, 512000)
+            .EUt(GTValues.VA[GTValues.UV])
+        )
         .duration(3000)
-        .EUt(GTValues.VA[GTValues.ZPM])
+        .EUt(GTValues.VA[GTValues.UV])
     
-    event.recipes.gtceu.packer("pack_drac_dust")
-        .itemOutputs("4x gtceu:small_draconium_dust")
-        .itemInputs("draconicevolution:draconium_dust")
-        .duration(10)
-        .EUt(GTValues.VA[GTValues.LV])
-        .circuit(4)
+    event.recipes.gtceu.mixer("drac_dust_mix")
+        .itemOutputs("2x gtceu:draconium_dust")
+        .itemInputs("5x gtceu:diamond_dust", "2x gtceu:nichrome_dust")
+        .inputFluids("gtceu:primal_mana 288")
+        .EUt(GTValues.VA[GTValues.EV])
+        .duration(100)
 
     event.custom(
         {
@@ -737,7 +845,7 @@ ServerEvents.recipes(event => {
                 "item": "draconicevolution:wyvern_axe"
             },
             "total_energy": 32000000,
-            "tier": "DRACONIC",
+            "tier": "DRACONIUM",
             "ingredients": [
                 {
                     "item": "gtceu:double_enderium_plate"
@@ -1359,10 +1467,12 @@ ServerEvents.recipes(event => {
     event.remove({id:"draconicevolution:machines/grinder"})
     event.recipes.gtceu.assembler("assmb_grndr")
         .itemOutputs("draconicevolution:grinder")
-        .itemInputs("4x gtceu:iron_plate", "gtceu:draconium_frame", "2x redstone_arsenal:flux_sword", "2x #forge:heads", "draconicevolution:wyvern_energy_core")
+        .itemInputs("5x gtceu:steel_plate", "gtceu:draconium_frame", "2x redstone_arsenal:flux_sword", "2x #forge:heads", "draconicevolution:wyvern_energy_core")
         .inputFluids("gtceu:draconium 576")
         .duration(3000)
         .EUt(GTValues.VA[GTValues.HV])
+
+    event.remove({id:"draconicevolution:tools/chaotic_staff"})
 
     event.recipes.gtceu.assembler("assmb_mdl_core")
         .itemOutputs("draconicevolution:module_core")
@@ -1862,8 +1972,4 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.LV])
 
 })
-}
-    
-    
-
-    
+} 
