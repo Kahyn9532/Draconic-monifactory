@@ -310,8 +310,9 @@ if (Platform.isLoaded("draconicevolution")) {
         "draconicevolution:awakened_draconium_block",
         "draconicevolution:awakened_draconium_dust",
         "draconicevolution:generator",
+        "draconicevolution:draconium_dust",
 
-        //Solar flux reborn de compat
+        //Solar flux reborn DE compat
         "solarflux:sp_de.wyvern",
         "solarflux:sp_de.draconic",
         "solarflux:sp_de.chaotic"
