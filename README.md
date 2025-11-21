@@ -9,7 +9,7 @@ This projects scripts are heavily forked from monifactory's
 
 These scripts will feature a changement in the recipes of most draconic evolution items making them more difficult to achieve.(and more greggy ;) )
 
-I plan on making it an official optional compat when the project will be entirely finished.
+I might make it an official optional compat when the project will be entirely finished.
 
 
 Don't hesitate to open a new issue if there is one or to make a suggestion for the project.
