@@ -14,7 +14,7 @@ These scripts will feature a changement in the recipes of most draconic evolutio
 
 3rd step: Paste it in the monifactory folder
 
-4th step: Click on "Replace the files in the destination"
+Final step: Click on "Replace the files in the destination"
 
 ## Misc:
 I might make it an official optional compat when the project will be entirely finished.
