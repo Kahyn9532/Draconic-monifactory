@@ -537,7 +537,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.mixer("drac_dust_mix")
         .itemOutputs("2x gtceu:draconium_dust")
         .itemInputs("5x gtceu:diamond_dust", "2x gtceu:nichrome_dust")
-        .inputFluids("gtceu:primal_mana 288")
+        .inputFluids("gtceu:mana 288")
         .EUt(GTValues.VA[GTValues.EV])
         .duration(100)
 
