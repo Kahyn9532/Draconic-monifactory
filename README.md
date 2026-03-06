@@ -25,8 +25,7 @@ I might make it an official optional compat when the project will be entirely fi
 
 Don't hesitate to open a new issue if there is one or to make a suggestion for the project.
 
-I'd also like to say that this project WILL take a lot of time to be finished as i'm making it
-parellel to studying and also because i'm new around coding.
+I'd also like to say that this project WILL take a lot of time to be finished because I have a life
 
 _[Draconic evolution](https://github.com/Draconic-Inc/Draconic-Evolution)_ mod by [brandon3055](https://github.com/brandon3055)
 
