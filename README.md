@@ -11,7 +11,7 @@ This projects scripts are heavily forked from monifactory's
 These scripts will feature a changement in the recipes of most draconic evolution items making them more difficult to achieve.(and more greggy ;) )
 
 ## Installation:
-1st step: Download the kubejs file, duh
+1st step: Download the kubejs file
 
 2nd step: Copy it
 
