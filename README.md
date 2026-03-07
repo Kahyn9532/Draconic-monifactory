@@ -1,4 +1,7 @@
 <h1 align="center">Draconic Monifactory</h1>
+
+## CURRENT VERSION ONLY WORK IN <0.12.9 I AM WORKING ON IT
+
 Draconic monifactory is a group of kubejs scripts for the draconic evolution mod to integrate with Monifactory
 
 
